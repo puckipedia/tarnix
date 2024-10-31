@@ -31,8 +31,8 @@ After a while, we figured out a solution that was reasonable, but had
 its limits: Generating a NAR file, and then using an input-addressed
 `builtin:fetchurl` derivation. However, this was broken unceremoniously
 by CppNix, due to an apparent "vulnerability", which was actually a bug
-in the Nix sandbox on macOS, which (at the time of writing) still has
-not been fixed, after the Nix team was made aware of it in _February_.
+in the Nix sandbox on macOS, which was [fixed 8.5 months after the Nix
+team was made aware of it in _February_](https://github.com/NixOS/nix/security/advisories/GHSA-wf4c-57rh-9pjg).
 
 In my search for a modern alternative, I found out about
 `builtin:unpack-channel`. It uses libarchive to unpack archives at
